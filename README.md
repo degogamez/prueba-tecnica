@@ -18,7 +18,7 @@ Docker
 Descargar el proyecto:
 
 ```
-https://github.com/degogamez/prueba-tecnica/archive/master.zip)
+https://github.com/degogamez/prueba-tecnica/archive/master.zip
 ```
 
 Descomprimimos e ingresamos al proyecto prueba-tecnica

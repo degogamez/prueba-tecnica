@@ -1,6 +1,6 @@
 # Prueba Tecnica
 
-Realización de la prueba tecnica para el proceso de selección
+Desarrollo de la prueba tecnica para el proceso de selección
 
 ## Primero pasos
 

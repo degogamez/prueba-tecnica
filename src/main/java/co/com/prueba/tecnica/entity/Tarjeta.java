@@ -6,6 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Entidad Tarjeta
@@ -13,6 +17,7 @@ import javax.persistence.ManyToOne;
  * @author diego.gamez
  *
  */
+@JsonInclude(Include.NON_NULL)
 @Entity
 public class Tarjeta extends Base {
 	@Id
@@ -28,6 +33,9 @@ public class Tarjeta extends Base {
 	@ManyToOne
 	@JoinColumn(name="id_cliente")
 	private Cliente cliente;
+	
+	@Transient
+	private Integer idCliente;
 	
 	//consumos
 
@@ -69,5 +77,13 @@ public class Tarjeta extends Base {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+
+	public Integer getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Integer idCliente) {
+		this.idCliente = idCliente;
 	}
 }

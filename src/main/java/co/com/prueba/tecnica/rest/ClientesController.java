@@ -1,5 +1,8 @@
 package co.com.prueba.tecnica.rest;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -20,8 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.com.prueba.tecnica.entity.Cliente;
 import co.com.prueba.tecnica.repository.ClienteRepository;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 
 /**
  * Recurso clientes

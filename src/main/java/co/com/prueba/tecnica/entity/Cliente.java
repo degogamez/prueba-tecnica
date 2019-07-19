@@ -5,6 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Entidad Cliente
+ * 
+ * @author diego.gamez
+ *
+ */
 @Entity
 public class Cliente extends Base {
 	@Id

@@ -17,6 +17,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import co.com.prueba.tecnica.entity.Cliente;
 import co.com.prueba.tecnica.repository.ClienteRepository;
 
+/**
+ * Pruebas unitarias
+ * de Controlador
+ * de Clientes
+ * 
+ * @author diego.gamez
+ *
+ */
 @RunWith(SpringRunner.class)
 public class ClientesControllerTest {
 

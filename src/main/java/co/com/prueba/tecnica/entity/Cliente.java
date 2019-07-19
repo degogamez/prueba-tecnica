@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 /**
  * Entidad Cliente
@@ -17,12 +19,20 @@ public class Cliente extends Base {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
+	@NotBlank(message = "Debe ingresar un nombre")
+	@Size(max = 50, message = "Nombre debe tener maximo 50 caracteres")
 	private String nombre;
 	
+	@NotBlank(message = "Debe ingresar un direccion")
+	@Size(max = 100, message = "Direccion debe tener maximo 100 caracteres")
 	private String direccion;
 	
+	@NotBlank(message = "Debe ingresar un ciudad")
+	@Size(max = 30, message = "Ciudad debe tener maximo 30 caracteres")
 	private String ciudad;
 	
+	@NotBlank(message = "Debe ingresar un telefono")
+	@Size(max = 20, message = "Telefono debe tener maximo 20 caracteres")
 	private String telefono;
 
 	public Integer getId() {

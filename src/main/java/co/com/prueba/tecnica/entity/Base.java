@@ -1,6 +1,8 @@
 package co.com.prueba.tecnica.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * Clase base
@@ -12,5 +14,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  */
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@JsonInclude(Include.NON_NULL)
 public class Base {
 }

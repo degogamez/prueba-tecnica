@@ -8,16 +8,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 /**
  * Entidad Tarjeta
  * 
  * @author diego.gamez
  *
  */
-@JsonInclude(Include.NON_NULL)
 @Entity
 public class Tarjeta extends Base {
 	@Id

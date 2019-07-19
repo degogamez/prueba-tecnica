@@ -1,11 +1,17 @@
 package co.com.prueba.tecnica.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Entidad Cliente
@@ -34,6 +40,10 @@ public class Cliente extends Base {
 	@NotBlank(message = "Debe ingresar un telefono")
 	@Size(max = 20, message = "Telefono debe tener maximo 20 caracteres")
 	private String telefono;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "cliente", orphanRemoval = true, cascade = CascadeType.ALL)
+	private List<Tarjeta> tarjetas;
 
 	public Integer getId() {
 		return id;
@@ -73,5 +83,13 @@ public class Cliente extends Base {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	public List<Tarjeta> getTarjetas() {
+		return tarjetas;
+	}
+
+	public void setTarjetas(List<Tarjeta> tarjetas) {
+		this.tarjetas = tarjetas;
 	}
 }

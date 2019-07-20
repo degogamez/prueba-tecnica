@@ -33,8 +33,6 @@ public class Tarjeta extends Base {
 	@Transient
 	private Integer idCliente;
 	
-	//consumos
-
 	public Integer getId() {
 		return id;
 	}
